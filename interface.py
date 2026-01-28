@@ -1,16 +1,16 @@
 import tkinter as tk
-from ui_new_map import new_map, new_map_affichage
+from ui_new_map import new_map
 from ui_open_map import *
 
 def interface_display(interfaces: dict[str, tk.Frame], to_display):
     for name, interface in interfaces.items():
         if name == to_display:
-            interface.pack()
+            interface.pack(fill='both', expand=True)
         else:
             interface.pack_forget()
 
 root = tk.Tk()
-root.geometry('200x150')  
+root.geometry('400x300')  
 
 menubar = tk.Menu(root)
 
